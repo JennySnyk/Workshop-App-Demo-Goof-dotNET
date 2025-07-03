@@ -40,18 +40,23 @@ The application will be available at `http://localhost:5083`.
 
 Here are the vulnerabilities included in this application. You can access them by navigating to the following paths:
 
-- [Command Injection](/Vulnerabilities/CommandInjection)
-- [Hardcoded Secrets](/Vulnerabilities/HardcodedSecrets)
-- [Insecure Cryptography](/Vulnerabilities/InsecureCrypto)
-- [Insecure Deserialization](/Vulnerabilities/InsecureDeserialization)
-- [LDAP Injection](/Vulnerabilities/LdapInjection)
-- [Log Forging](/Vulnerabilities/LogForging)
-- [Path Traversal](/Vulnerabilities/PathTraversal)
-- [SQL Injection](/Vulnerabilities/Sqli)
-- [Server-Side Request Forgery (SSRF)](/Vulnerabilities/Ssrf)
-- [Unvalidated Redirect](/Vulnerabilities/UnvalidatedRedirect)
-- [XPath Injection](/Vulnerabilities/XPathInjection)
-- [Cross-Site Scripting (XSS)](/Vulnerabilities/Xss)
+- [Broken Access Control](./Pages/Admin) - *Admin page accessible without login.*
+- [Command Injection](./Pages/Vulnerabilities/CmdInjection)
+- [Cross-Site Scripting (XSS)](./Pages/Vulnerabilities/Xss)
+- [Hardcoded API Key](./Pages/Vulnerabilities/ApiKey)
+- [Hardcoded Secrets](./Pages/Vulnerabilities/HardcodedSecrets)
+- [Insecure Crypto](./Pages/Vulnerabilities/InsecureCrypto)
+- [Insecure Deserialization](./Pages/Vulnerabilities/InsecureDeserialization)
+- [Insecure Randomness](./Pages/Vulnerabilities/InsecureRandom)
+- [LDAP Injection](./Pages/Vulnerabilities/LdapInjection)
+- [Log Forging](./Pages/Vulnerabilities/LogForging)
+- [Path Traversal](./Pages/Vulnerabilities/PathTraversal)
+- [SQL Injection](./Pages/Vulnerabilities/Sqli)
+- [SSRF (Server-Side Request Forgery)](./Pages/Vulnerabilities/Ssrf)
+- [SSTI (Server-Side Template Injection)](./Pages/Vulnerabilities/Ssti)
+- [Unvalidated Redirect](./Pages/Vulnerabilities/UnvalidatedRedirect)
+- [XPath Injection](./Pages/Vulnerabilities/XPathInjection)
+- [XXE (XML External Entity)](./Pages/Vulnerabilities/Xxe)
 
 ## Disclaimer
 

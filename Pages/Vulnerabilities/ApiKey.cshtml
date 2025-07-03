@@ -1,0 +1,20 @@
+@page
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.ApiKeyModel
+@{
+    ViewData["Title"] = "Hardcoded API Key";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hardcoded API Key</h1>
+    <p>This page uses a hardcoded API key to connect to a fictional service.</p>
+</div>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8 text-center">
+        <h3>Discovered API Key:</h3>
+        <div class="alert alert-danger">
+            <p>The following API key was found hardcoded in the source code:</p>
+            <code>@Model.ApiKey</code>
+        </div>
+    </div>
+</div>

@@ -30,6 +30,8 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/Sqli">SQL Injection</a></li>
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/Xss">XSS</a></li>
+                                <li><a class="dropdown-item" asp-page="/Vulnerabilities/XPathInjection">XPath Injection</a></li>
+                                <li><a class="dropdown-item" asp-page="/Vulnerabilities/LdapInjection">LDAP Injection</a></li>
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/CmdInjection">Command Injection</a></li>
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/PathTraversal">Path Traversal</a></li>
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/InsecureDeserialization">Insecure Deserialization</a></li>
@@ -37,9 +39,13 @@
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/UnvalidatedRedirect">Unvalidated Redirect</a></li>
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/InsecureCrypto">Insecure Crypto</a></li>
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/HardcodedSecrets">Hardcoded Secrets</a></li>
+                                <li><a class="dropdown-item" asp-page="/Vulnerabilities/ApiKey">Hardcoded API Key</a></li>
                                 <li><a class="dropdown-item" asp-page="/Vulnerabilities/LogForging">Log Forging</a></li>
-                                <li><a class="dropdown-item" asp-page="/Vulnerabilities/XPathInjection">XPath Injection</a></li>
-                                <li><a class="dropdown-item" asp-page="/Vulnerabilities/LdapInjection">LDAP Injection</a></li>
+                                <li><a class="dropdown-item" asp-page="/Vulnerabilities/InsecureRandom">Insecure Randomness</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/Vulnerabilities/Xxe">XXE</a></li>
+                                <li><a class="dropdown-item" asp-page="/Vulnerabilities/Ssti">SSTI</a></li>
+                                <li><a class="dropdown-item text-danger" asp-page="/Admin">Broken Access Control</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

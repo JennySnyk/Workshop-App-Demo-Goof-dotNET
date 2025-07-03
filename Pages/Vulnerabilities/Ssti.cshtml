@@ -1,0 +1,31 @@
+@page
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.SstiModel
+@{
+    ViewData["Title"] = "SSTI";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Server-Side Template Injection (SSTI)</h1>
+    <p>This page uses a simple, custom server-side template engine. Enter a template below to see it rendered.</p>
+    <p>Try a payload like <code>Hello, {{ User.Name }}!</code> or something more malicious like <code>{{ System.Diagnostics.Process.Start("calc.exe") }}</code>.</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <form method="post">
+            <div class="form-group">
+                <label for="template">Template Input:</label>
+                <input id="template" name="Template" class="form-control" value="@Model.Template" />
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Render Template</button>
+        </form>
+
+        @if (Model.RenderedResult != null)
+        {
+            <div class="mt-4">
+                <h3>Rendered Output:</h3>
+                <div class="alert alert-info">@Model.RenderedResult</div>
+            </div>
+        }
+    </div>
+</div>

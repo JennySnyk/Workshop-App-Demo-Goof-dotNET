@@ -1,0 +1,32 @@
+@page
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.XxeModel
+@{
+    ViewData["Title"] = "XXE";
+}
+
+<div class="text-center">
+    <h1 class="display-4">XML External Entity (XXE)</h1>
+    <p>This page is vulnerable to XXE. Submit XML content below to see it parsed by the server.</p>
+    <p>Try submitting the following payload to read the <code>/etc/passwd</code> file (on Linux/macOS):</p>
+    <pre><code>&lt;!DOCTYPE foo [ &lt;!ENTITY xxe SYSTEM "file:///etc/passwd"&gt; ]&gt;&lt;data&gt;&amp;xxe;&lt;/data&gt;</code></pre>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <form method="post">
+            <div class="form-group">
+                <label for="xmlContent">XML Input:</label>
+                <textarea id="xmlContent" name="XmlContent" class="form-control" rows="10">@Model.XmlContent</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2">Parse XML</button>
+        </form>
+
+        @if (Model.ParsedResult != null)
+        {
+            <div class="mt-4">
+                <h3>Parsed Result:</h3>
+                <pre><code>@Model.ParsedResult</code></pre>
+            </div>
+        }
+    </div>
+</div>

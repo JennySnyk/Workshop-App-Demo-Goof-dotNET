@@ -1,0 +1,21 @@
+@page
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.InsecureRandomModel
+@{
+    ViewData["Title"] = "Insecure Randomness";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Insecure Randomness</h1>
+    <p>This page generates a "secure" password reset token using a weak random number generator.</p>
+</div>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6 text-center">
+        <h3>Your Password Reset Token:</h3>
+        <p class="lead">A new token is generated each time you refresh the page.</p>
+        <div class="alert alert-info">
+            <h4><strong>@Model.ResetToken</strong></h4>
+        </div>
+        <p class="text-muted">Because this token is generated with <code>System.Random</code>, it is predictable and insecure.</p>
+    </div>
+</div>
