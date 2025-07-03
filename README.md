@@ -11,7 +11,7 @@ This is a deliberately vulnerable ASP.NET Core application designed for security
 
 ## Screenshot
 
-![Application Screenshot](screenshot.png)
+![Application Screenshot](assets/screenshot.png)
 
 ## Getting Started
 
