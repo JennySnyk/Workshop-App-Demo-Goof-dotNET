@@ -1,0 +1,35 @@
+# Visual Studio cache files
+.vs/
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+*.csproj.user
+
+# Rider files
+.idea/
+
+# Test results
+[Tt]est[Rr]esults/
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Rider-specific files
+*.sln.iml
+
+# Other
+*.swp
+*.bak
