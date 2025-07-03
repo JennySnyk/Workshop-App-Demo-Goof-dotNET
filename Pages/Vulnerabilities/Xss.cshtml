@@ -1,0 +1,21 @@
+@page "/xss"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.XssModel
+@using System.Text.Encodings.Web
+@using Microsoft.AspNetCore.Html
+
+@{    ViewData["Title"] = "Cross-Site Scripting (XSS)";
+}
+
+<h1>Cross-Site Scripting (XSS)</h1>
+<p>This page is vulnerable to Cross-Site Scripting. Try to execute a script.</p>
+
+<form method="get">
+    <input type="text" name="query" placeholder="Enter search query" />
+    <button type="submit">Search</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Query))
+{
+    <h2>Search Results:</h2>
+    <p>You searched for: @Html.Raw(Model.Query)</p>
+}

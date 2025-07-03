@@ -1,0 +1,26 @@
+@page "/ssrf"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.SsrfModel
+
+@{    ViewData["Title"] = "Server-Side Request Forgery (SSRF)";
+}
+
+<h1>Server-Side Request Forgery (SSRF)</h1>
+<p>This page is vulnerable to SSRF. Try to access internal resources.</p>
+
+<form method="post">
+    <input type="text" name="url" placeholder="Enter a URL to fetch" />
+    <button type="submit">Fetch</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.UrlContent))
+{
+    <h2>URL Content:</h2>
+    <pre>@Model.UrlContent</pre>
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
+    </div>
+}

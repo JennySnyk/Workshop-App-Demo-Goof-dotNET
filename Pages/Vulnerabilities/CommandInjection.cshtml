@@ -1,0 +1,19 @@
+@page "/command-injection"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.CommandInjectionModel
+
+@{    ViewData["Title"] = "Command Injection";
+}
+
+<h1>Command Injection</h1>
+<p>This page is vulnerable to Command Injection. Try to execute other commands.</p>
+
+<form method="post">
+    <input type="text" name="host" placeholder="Enter a host to ping" />
+    <button type="submit">Ping</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.CommandOutput))
+{
+    <h2>Output:</h2>
+    <pre>@Model.CommandOutput</pre>
+}

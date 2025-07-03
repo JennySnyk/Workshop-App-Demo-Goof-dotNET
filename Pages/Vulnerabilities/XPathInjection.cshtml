@@ -1,0 +1,31 @@
+@page "/xpath-injection"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.XPathInjectionModel
+
+@{    ViewData["Title"] = "XPath Injection";
+}
+
+<h1>XPath Injection</h1>
+<p>This page is vulnerable to XPath Injection. Try to find other users.</p>
+
+<form method="post">
+    <input type="text" name="username" placeholder="Enter username" />
+    <button type="submit">Search</button>
+</form>
+
+@if (Model.Usernames.Any())
+{
+    <h2>Results:</h2>
+    <ul>
+        @foreach (var user in Model.Usernames)
+        {
+            <li>@user</li>
+        }
+    </ul>
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
+    </div>
+}

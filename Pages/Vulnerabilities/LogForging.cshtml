@@ -1,0 +1,18 @@
+@page "/log-forging"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.LogForgingModel
+
+@{    ViewData["Title"] = "Log Forging";
+}
+
+<h1>Log Forging</h1>
+<p>This page is vulnerable to Log Forging. Enter a message to be logged.</p>
+
+<form method="post">
+    <input type="text" name="logMessage" placeholder="Enter log message" />
+    <button type="submit">Log</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <h2>@Model.Message</h2>
+}

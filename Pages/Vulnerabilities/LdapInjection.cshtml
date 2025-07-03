@@ -1,0 +1,18 @@
+@page "/ldap-injection"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.LdapInjectionModel
+
+@{    ViewData["Title"] = "LDAP Injection";
+}
+
+<h1>LDAP Injection</h1>
+<p>This page is vulnerable to LDAP Injection. Enter a username to build a query.</p>
+
+<form method="post">
+    <input type="text" name="username" placeholder="Enter username" />
+    <button type="submit">Search</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <h2>@Model.Message</h2>
+}

@@ -1,0 +1,10 @@
+@page "/unvalidated-redirect"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.UnvalidatedRedirectModel
+
+@{    ViewData["Title"] = "Unvalidated Redirect";
+}
+
+<h1>Unvalidated Redirect</h1>
+<p>This page is vulnerable to Unvalidated Redirect. Try to redirect to an external site.</p>
+
+<a href="/unvalidated-redirect?returnUrl=https://www.google.com">Redirect to Google</a>

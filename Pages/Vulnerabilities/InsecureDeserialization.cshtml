@@ -1,0 +1,27 @@
+@page "/insecure-deserialization"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.InsecureDeserializationModel
+
+@{    ViewData["Title"] = "Insecure Deserialization";
+    // Example payload: {"$type":"Workshop_App_Demo_Goof_dotNET.Models.UserData, Workshop-App-Demo-Goof-dotNET","Name":"test","IsAdmin":true}
+    // Base64 encoded: eyIkdHlwZSI6IldvcmtzaG9wX0FwcF9EZW1vX0dvb2ZfZG90TkVULk1vZGVscy5Vc2VyRGF0YSwgV29ya3Nob3AtQXBwLURlbW8tR29vZi1kb3RORVQiLCJOYW1lIjoidGVzdCIsIklzQWRtaW4iOnRydWV9
+}
+
+<h1>Insecure Deserialization</h1>
+<p>This page is vulnerable to Insecure Deserialization. Try to deserialize a malicious object.</p>
+
+<form method="post">
+    <input type="text" name="data" placeholder="Enter base64 encoded data" />
+    <button type="submit">Deserialize</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.DeserializedName))
+{
+    <h2>Deserialized Name: @Model.DeserializedName</h2>
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
+    </div>
+}

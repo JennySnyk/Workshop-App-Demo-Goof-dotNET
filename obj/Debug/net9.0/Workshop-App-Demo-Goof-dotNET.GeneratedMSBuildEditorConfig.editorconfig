@@ -1,0 +1,97 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Workshop_App_Demo_Goof_dotNET
+build_property.RootNamespace = Workshop_App_Demo_Goof_dotNET
+build_property.ProjectDir = /Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/CommandInjection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL0NvbW1hbmRJbmplY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/HardcodedSecrets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL0hhcmRjb2RlZFNlY3JldHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/InsecureCrypto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL0luc2VjdXJlQ3J5cHRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/InsecureDeserialization.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL0luc2VjdXJlRGVzZXJpYWxpemF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/LdapInjection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL0xkYXBJbmplY3Rpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/LogForging.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL0xvZ0ZvcmdpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/PathTraversal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL1BhdGhUcmF2ZXJzYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/Sqli.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL1NxbGkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/Ssrf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL1NzcmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/UnvalidatedRedirect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL1VudmFsaWRhdGVkUmVkaXJlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/XPathInjection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL1hQYXRoSW5qZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Vulnerabilities/Xss.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVnVsbmVyYWJpbGl0aWVzL1hzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/jenny/CascadeProjects/Demo-proj/Workshop-App-Demo-Goof-dotNET/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1jsl1z3ti5

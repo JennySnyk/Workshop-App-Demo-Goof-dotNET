@@ -1,0 +1,113 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Workshop App Demo - Goof (.NET Edition)";
+}
+
+<div class="container">
+    <h1>Welcome to Workshop App Demo - Goof (.NET Edition)</h1>
+    <p>This is a deliberately vulnerable application for security demonstrations.</p>
+
+    <div class="todo-section vulnerability-section">
+        <h2>To-Do List</h2>
+        <form id="add-todo-form" method="post" class="form-inline mb-3">
+            <div class="form-group">
+                <input asp-for="NewTodo.Text" class="form-control" placeholder="New to-do item" style="width: 300px; display: inline-block; margin-right: 10px;">
+                <button type="submit" class="btn btn-primary">Add Item</button>
+            </div>
+        </form>
+        <ul id="todo-list" class="list-group">
+            @foreach (var todo in Model.Todos)
+            {
+                <li class="list-group-item">
+                    <span class="flex-grow-1">@todo.Text</span>
+                    <form method="post" class="delete-form" style="display: inline;">
+                        <input type="hidden" name="id" value="@todo.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const addTodoForm = document.getElementById('add-todo-form');
+            const todoList = document.getElementById('todo-list');
+            const newTodoInput = document.querySelector('[name="NewTodo.Text"]');
+            const requestVerificationToken = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+            // Handle Add Todo
+            addTodoForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                
+                const formData = new FormData(addTodoForm);
+                const searchParams = new URLSearchParams();
+                for (const pair of formData) {
+                    searchParams.append(pair[0], pair[1]);
+                }
+
+                fetch(addTodoForm.action, {
+                    method: 'POST',
+                    body: searchParams,
+                    headers: {
+                        'RequestVerificationToken': requestVerificationToken
+                    }
+                })
+                .then(res => res.json())
+                .then(newTodo => {
+                    if(newTodo.success === false) {
+                        alert(newTodo.message);
+                        return;
+                    }
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item';
+                    li.innerHTML = `
+                        <span class="flex-grow-1">${newTodo.text}</span>
+                        <form method="post" class="delete-form" style="display: inline;">
+                            <input type="hidden" name="id" value="${newTodo.id}" />
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    `;
+                    todoList.appendChild(li);
+                    newTodoInput.value = ''; // Clear the input field
+                })
+                .catch(error => console.error('Error adding todo:', error));
+            });
+
+            // Handle Delete Todo using event delegation
+            todoList.addEventListener('submit', function(e) {
+                if (e.target.classList.contains('delete-form')) {
+                    e.preventDefault();
+                    const deleteForm = e.target;
+                    const formData = new FormData(deleteForm);
+                    const deleteUrl = `?handler=Delete`;
+
+                    const searchParams = new URLSearchParams();
+                    for (const pair of formData) {
+                        searchParams.append(pair[0], pair[1]);
+                    }
+
+                    fetch(deleteUrl, {
+                        method: 'POST',
+                        body: searchParams,
+                        headers: {
+                            'RequestVerificationToken': requestVerificationToken
+                        }
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                            deleteForm.closest('li').remove();
+                        } else {
+                            alert('Failed to delete item.');
+                        }
+                    })
+                    .catch(error => console.error('Error deleting todo:', error));
+                }
+            });
+        });
+    </script>
+}

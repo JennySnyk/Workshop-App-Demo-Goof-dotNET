@@ -1,0 +1,18 @@
+@page "/insecure-crypto"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.InsecureCryptoModel
+
+@{    ViewData["Title"] = "Insecure Cryptography";
+}
+
+<h1>Insecure Cryptography</h1>
+<p>This page uses a weak hashing algorithm (MD5). Enter a password to see the hash.</p>
+
+<form method="post">
+    <input type="text" name="password" placeholder="Enter password" />
+    <button type="submit">Hash</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.HashedPassword))
+{
+    <h2>MD5 Hash: @Model.HashedPassword</h2>
+}

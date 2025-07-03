@@ -1,0 +1,26 @@
+@page "/path-traversal"
+@model Workshop_App_Demo_Goof_dotNET.Pages.Vulnerabilities.PathTraversalModel
+
+@{    ViewData["Title"] = "Path Traversal";
+}
+
+<h1>Path Traversal</h1>
+<p>This page is vulnerable to Path Traversal. Try to read files outside of the intended directory.</p>
+
+<form method="get">
+    <input type="text" name="file" placeholder="Enter filename (e.g., welcome.txt)" />
+    <button type="submit">View File</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.FileContent))
+{
+    <h2>File Content:</h2>
+    <pre>@Model.FileContent</pre>
+}
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @Model.ErrorMessage
+    </div>
+}
