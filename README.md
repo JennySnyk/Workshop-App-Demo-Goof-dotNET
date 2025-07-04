@@ -38,25 +38,28 @@ The application will be available at `http://localhost:5083`.
 
 ## Vulnerability Details
 
-Here are the vulnerabilities included in this application. You can access them by navigating to the following paths:
+Here are some of the vulnerabilities included in this application and how to trigger them:
 
-- [Broken Access Control](./Pages/Admin) - *Admin page accessible without login.*
-- [Command Injection](./Pages/Vulnerabilities/CmdInjection)
-- [Cross-Site Scripting (XSS)](./Pages/Vulnerabilities/Xss)
-- [Hardcoded API Key](./Pages/Vulnerabilities/ApiKey)
-- [Hardcoded Secrets](./Pages/Vulnerabilities/HardcodedSecrets)
-- [Insecure Crypto](./Pages/Vulnerabilities/InsecureCrypto)
-- [Insecure Deserialization](./Pages/Vulnerabilities/InsecureDeserialization)
-- [Insecure Randomness](./Pages/Vulnerabilities/InsecureRandom)
-- [LDAP Injection](./Pages/Vulnerabilities/LdapInjection)
-- [Log Forging](./Pages/Vulnerabilities/LogForging)
-- [Path Traversal](./Pages/Vulnerabilities/PathTraversal)
-- [SQL Injection](./Pages/Vulnerabilities/Sqli)
-- [SSRF (Server-Side Request Forgery)](./Pages/Vulnerabilities/Ssrf)
-- [SSTI (Server-Side Template Injection)](./Pages/Vulnerabilities/Ssti)
-- [Unvalidated Redirect](./Pages/Vulnerabilities/UnvalidatedRedirect)
-- [XPath Injection](./Pages/Vulnerabilities/XPathInjection)
-- [XXE (XML External Entity)](./Pages/Vulnerabilities/Xxe)
+*   **SQL Injection**
+    *   **Route**: `/Vulnerabilities/Sqli`
+    *   **How to trigger**: In the input form, enter the payload `' OR '1'='1` and submit. This will return all users from the database.
+
+*   **Command Injection**
+    *   **Route**: `/Vulnerabilities/CommandInjection`
+    *   **How to trigger**: In the input form, enter an IP address followed by a command, like `8.8.8.8; ls`. The output of the `ls` command will be displayed on the page.
+
+*   **Path Traversal**
+    *   **Route**: `/Vulnerabilities/PathTraversal`
+    *   **How to trigger**: Add the query parameter `?file=../../appsettings.json` to the URL. The application will read and display the contents of the `appsettings.json` file.
+
+*   **Cross-Site Scripting (XSS)**
+    *   **Route**: `/Vulnerabilities/Xss`
+    *   **How to trigger**: Add the query parameter `?Query=<script>alert('XSS!')</script>` to the URL. This will execute the script and cause an alert box to appear.
+
+*   **Vulnerable Dependencies (SCA)**
+    *   The project includes several dependencies with known vulnerabilities. These can be detected by running a Snyk Open Source scan using the `dotnet` integration.
+
+*For a full list of all vulnerabilities, please inspect the source code in the `/Pages/Vulnerabilities` directory.*
 
 ## Disclaimer
 
